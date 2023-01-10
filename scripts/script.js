@@ -1,5 +1,5 @@
 import products from "../product.json" assert { type: "json" };
-
+import ManagerProduct from "./mangerProduct.js";
 var x = 10;
 // const y = 5;
 // y = 10;
@@ -59,21 +59,14 @@ console.log(map);
 //   console.log(value);
 // });
 // console.log("1+2", 1 + 2);
-const API = "http://localhost:3000";
-const callAPI = new Promise((resolve, reject) => {
-  fetch(`${API}/products`)
-    .then(function (response) {
-      resolve(response.json());
-    })
-    .catch((err) => reject("lỗi server: " + err.message));
-});
 /**
  * lấy data của api trả về render html
  *  document.getElementById("products").innerHTML
  */
-callAPI.then((data) => printHtml(data)).catch((err) => console.log(err));
-
+const productList = await ManagerProduct.getAll();
+console.log("productList", ManagerProduct.products);
 const printHtml = (data) => {
+  console.log(data);
   const elPost = document.getElementById("items");
   let html = "";
   for (const item of data) {
@@ -110,3 +103,12 @@ const printHtml = (data) => {
   }
   elPost.innerHTML = html;
 };
+printHtml(ManagerProduct.products);
+const set = new Set();
+set.add("a");
+set.add("a");
+set.add("a");
+set.add("b");
+set.add("b");
+set.add("c");
+console.log(set.size);
