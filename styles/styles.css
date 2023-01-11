@@ -1,0 +1,12 @@
+.search {
+  width: 50%;
+  margin: 10px;
+}
+
+.item {
+  padding: 15px;
+}
+
+.item h5 {
+  text-align: center;
+}

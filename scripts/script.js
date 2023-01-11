@@ -1,4 +1,4 @@
-import products from "../product.json" assert { type: "json" };
+import products from "../product.json";
 import ManagerProduct from "./mangerProduct.js";
 var x = 10;
 // const y = 5;
@@ -63,10 +63,15 @@ console.log(map);
  * lấy data của api trả về render html
  *  document.getElementById("products").innerHTML
  */
-const productList = await ManagerProduct.getAll();
-console.log("productList", ManagerProduct.products);
+let productList = [];
+const fetchData = async () => {
+  await ManagerProduct.getAll();
+  console.log(ManagerProduct.products);
+  printHtml(ManagerProduct.products);
+  productList = ManagerProduct.products;
+};
+fetchData();
 const printHtml = (data) => {
-  console.log(data);
   const elPost = document.getElementById("items");
   let html = "";
   for (const item of data) {
@@ -74,8 +79,8 @@ const printHtml = (data) => {
     <div id="item" class="col">
     <div class="card shadow-sm">
       <img src="${item.image}"/>
-        <title>${item.title}</title>
       <div class="card-body">
+      <h5 style="font-weight: bold">${item.title}</h5>
         <p class="card-text">
           ${item.description}
         </p>
@@ -103,12 +108,19 @@ const printHtml = (data) => {
   }
   elPost.innerHTML = html;
 };
-printHtml(ManagerProduct.products);
-const set = new Set();
-set.add("a");
-set.add("a");
-set.add("a");
-set.add("b");
-set.add("b");
-set.add("c");
-console.log(set.size);
+
+// const set = new Set();
+// set.add("a");
+// set.add("a");
+// set.add("a");
+// set.add("b");
+// set.add("b");
+// set.add("c");
+// console.log(set.size);
+const inputSearch = document.getElementById("input-search");
+if (inputSearch) {
+  console.log("inputSearch", inputSearch);
+  inputSearch.addEventListener("input", (event) => {
+    console.log(event.target.value);
+  });
+}
