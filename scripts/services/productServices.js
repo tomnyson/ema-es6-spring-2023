@@ -21,10 +21,6 @@ const isEmpty = (value) => {
 };
 
 export const searchProduct = async (payload = {}) => {
-  if (!isEmpty(payload)) {
-    const query = "?" + new URLSearchParams(payload).toString();
-    console.log("query", query);
-    // return fetchProduct("products" + query);
-  }
-  // return fetchProduct("products");
+  const query = "?" + new URLSearchParams(payload).toString();
+  return fetchProduct("products" + query);
 };

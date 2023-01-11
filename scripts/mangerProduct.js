@@ -1,6 +1,6 @@
 //  *  array quản lý post
 //  */
-import { getAll } from "./services/productServices.js";
+import { getAll, searchProduct } from "./services/productServices.js";
 
 class ManagerProduct {
   constructor(products) {
@@ -8,6 +8,12 @@ class ManagerProduct {
   }
   static async getAll() {
     const data = await getAll();
+    this.products = data;
+  }
+  static async searchProduct(keyword) {
+    const data = await searchProduct({
+      title_like: keyword,
+    });
     this.products = data;
   }
 }

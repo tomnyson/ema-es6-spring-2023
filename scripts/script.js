@@ -1,5 +1,6 @@
 import products from "../product.json";
 import ManagerProduct from "./mangerProduct.js";
+
 var x = 10;
 // const y = 5;
 // y = 10;
@@ -64,19 +65,18 @@ console.log(map);
  *  document.getElementById("products").innerHTML
  */
 let productList = [];
-const fetchData = async () => {
+(async () => {
   await ManagerProduct.getAll();
   console.log(ManagerProduct.products);
   printHtml(ManagerProduct.products);
   productList = ManagerProduct.products;
-};
-fetchData();
+})();
 const printHtml = (data) => {
   const elPost = document.getElementById("items");
   let html = "";
   for (const item of data) {
     html += `
-    <div id="item" class="col">
+    <div id="item" class="col-lg-3 col-md-12">
     <div class="card shadow-sm">
       <img src="${item.image}"/>
       <div class="card-body">
@@ -120,7 +120,9 @@ const printHtml = (data) => {
 const inputSearch = document.getElementById("input-search");
 if (inputSearch) {
   console.log("inputSearch", inputSearch);
-  inputSearch.addEventListener("input", (event) => {
+  inputSearch.addEventListener("input", async (event) => {
     console.log(event.target.value);
+    await ManagerProduct.searchProduct(event.target.value);
+    printHtml(ManagerProduct.products);
   });
 }
