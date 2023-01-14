@@ -9,7 +9,9 @@ json-server --watch products.json
 ## document
 
 https://www.npmjs.com/package/json-server#filter
+
 ### install build tool
+
 ```
 npm init
 npm install --save-dev parcel
@@ -20,3 +22,8 @@ npm install --save-dev parcel
   },
 ```
 
+### loading icon
+
+spinner-border
+
+### auto suggest

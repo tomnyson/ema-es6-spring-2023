@@ -1,6 +1,6 @@
 import products from "../product.json";
 import ManagerProduct from "./mangerProduct.js";
-
+import { debounce } from "./helper/helper";
 var x = 10;
 // const y = 5;
 // y = 10;
@@ -118,11 +118,61 @@ const printHtml = (data) => {
 // set.add("c");
 // console.log(set.size);
 const inputSearch = document.getElementById("input-search");
+const spinerLoading = document.getElementById("loading-spiner");
+
+const searchDouce = debounce(async (event) => {
+  await ManagerProduct.searchProduct(event.target.value);
+  const searchModal = document.querySelector(".search_modal");
+  searchModal.innerHTML = "";
+  printModalSearchHtml(ManagerProduct.products);
+  printHtml(ManagerProduct.products);
+  spinerLoading.classList.remove("spinner-border");
+}, 1000);
+
 if (inputSearch) {
-  console.log("inputSearch", inputSearch);
-  inputSearch.addEventListener("input", async (event) => {
-    console.log(event.target.value);
-    await ManagerProduct.searchProduct(event.target.value);
-    printHtml(ManagerProduct.products);
+  inputSearch.addEventListener("input", (event) => {
+    spinerLoading.classList.add("spinner-border");
+
+    searchDouce(event);
   });
 }
+inputSearch.addEventListener("focus", () => {
+  console.log("show input search");
+  const searchModal = document.querySelector(".search_modal");
+  printModalSearchHtml(ManagerProduct.products);
+  searchModal.classList.remove("hide");
+});
+
+inputSearch.addEventListener("blur", () => {
+  console.log("show input out");
+  const searchModal = document.querySelector(".search_modal");
+  searchModal.classList.add("hide");
+});
+
+const printModalSearchHtml = (data) => {
+  const elPost = document.querySelector(".search_modal");
+  console.log(elPost);
+  let html = "";
+  let i = 0;
+  for (const item of data) {
+    if (i > 5) {
+      break;
+    }
+    html += `
+    <div class="row">
+        <div class="col-md-3">
+          <img class="img-thumbnail" src="${item.image}" />
+        </div>
+        <div class="col-md-8">
+        <a class="item_href" href="/detail.html?id=${item.id}">
+        <p>${item.title}</p>
+        <p class="price">${item.price}</p>
+        </a>
+        </div>
+    </div>
+    `;
+    i++;
+  }
+  i = 0;
+  elPost.innerHTML = html;
+};
