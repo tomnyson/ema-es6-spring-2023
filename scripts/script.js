@@ -1,6 +1,8 @@
 import products from "../product.json";
 import ManagerProduct from "./mangerProduct.js";
 import { debounce } from "./helper/helper";
+import { router } from "./views/router.js";
+
 var x = 10;
 // const y = 5;
 // y = 10;
@@ -64,6 +66,7 @@ console.log(map);
  * lấy data của api trả về render html
  *  document.getElementById("products").innerHTML
  */
+// console.log("detailHtml", detailHtml);
 let productList = [];
 (async () => {
   await ManagerProduct.getAll();
@@ -136,10 +139,13 @@ if (inputSearch) {
     searchDouce(event);
   });
 }
+const rootHtml = document.querySelector("#root");
+router("/");
 inputSearch.addEventListener("focus", () => {
   console.log("show input search");
   const searchModal = document.querySelector(".search_modal");
   printModalSearchHtml(ManagerProduct.products);
+
   searchModal.classList.remove("hide");
 });
 
@@ -164,7 +170,7 @@ const printModalSearchHtml = (data) => {
           <img class="img-thumbnail" src="${item.image}" />
         </div>
         <div class="col-md-8">
-        <a class="item_href" href="/detail.html?id=${item.id}">
+        <a data-id=${item.id} class="item_href" href="#"/>
         <p>${item.title}</p>
         <p class="price">${item.price}</p>
         </a>
@@ -175,4 +181,15 @@ const printModalSearchHtml = (data) => {
   }
   i = 0;
   elPost.innerHTML = html;
+  const tag = document.querySelector(".item_href");
+  if (tag) {
+    tag.addEventListener("click", () => {
+      console.log(tag.getAttribute("data-id"));
+      const id = tag.getAttribute("data-id");
+      const detail = ManagerProduct.products.filter(
+        (product) => product.id === id
+      );
+      rootHtml.innerHTML = router("/detail", detail[0]);
+    });
+  }
 };
