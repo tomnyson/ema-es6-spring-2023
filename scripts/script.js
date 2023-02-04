@@ -81,7 +81,7 @@ const printHtml = (data) => {
     html += `
     <div id="item" class="col-lg-3 col-md-12">
     <div class="card shadow-sm">
-      <img src="${item.image}"/>
+      <img class="thumbnail" src="#"/>
       <div class="card-body">
       <h5 style="font-weight: bold">${item.title}</h5>
         <p class="card-text">
@@ -101,6 +101,13 @@ const printHtml = (data) => {
             >
               Edit
             </button>
+            <button
+            type="button"
+            data-id=${item.id}
+            class="btn-delete btn btn-sm btn-outline-danger"
+          >
+            delete
+          </button>
           </div>
           <small class="text-muted">9 mins</small>
         </div>
@@ -110,6 +117,7 @@ const printHtml = (data) => {
     `;
   }
   elPost.innerHTML = html;
+  handleDelete();
 };
 
 // const set = new Set();
@@ -167,7 +175,7 @@ const printModalSearchHtml = (data) => {
     html += `
     <div class="row">
         <div class="col-md-3">
-          <img class="img-thumbnail" src="${item.image}" />
+          <img class="img-thumbnail" src="#" />
         </div>
         <div class="col-md-8">
         <a data-id=${item.id} class="item_href" href="#"/>
@@ -181,15 +189,33 @@ const printModalSearchHtml = (data) => {
   }
   i = 0;
   elPost.innerHTML = html;
-  const tag = document.querySelector(".item_href");
-  if (tag) {
-    tag.addEventListener("click", () => {
-      console.log(tag.getAttribute("data-id"));
-      const id = tag.getAttribute("data-id");
+  document.querySelectorAll(".item_href").forEach((e) =>
+    e.addEventListener("click", () => {
+      const id = e.getAttribute("data-id");
       const detail = ManagerProduct.products.filter(
         (product) => product.id === id
       );
       rootHtml.innerHTML = router("/detail", detail[0]);
-    });
-  }
+      window.history.pushState({}, null, `/detail/${detail[0].id}`);
+    })
+  );
+};
+
+const handleDelete = () => {
+  document.querySelectorAll(".btn-delete").forEach((e) =>
+    e.addEventListener("click", () => {
+      const id = e.getAttribute("data-id");
+      if (confirm("are you sure delete") == true) {
+        const productDeleted = ManagerProduct.products.filter(
+          (product) => product.id !== id
+        );
+        console.log(productDeleted);
+        printHtml(productDeleted);
+        // rootHtml.innerHTML = router("/detail", detail[0]);
+        // window.history.pushState({}, null, `/detail/${detail[0].id}`);
+      } else {
+        return;
+      }
+    })
+  );
 };

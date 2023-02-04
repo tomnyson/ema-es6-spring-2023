@@ -71,11 +71,11 @@ const viewDetail = (detail) => {
         <div id="loading-spiner" class="text-primary" role="status"></div>
       </div>
       <div id="items" class="row">
-        <div class="col-md-3 col-sm-12">
+        <div class="col-sm-12">
           <div class="card shadow-sm">
-            <img src=" ${detail.image}"/>
-              <title>${detail.name}</title>
+            <img class="thumbnail" src="#"/>
             <div class="card-body">
+             <h3>${detail.title}</h3>
               <p class="card-text">
                 ${detail.description}
               </p>

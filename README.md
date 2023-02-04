@@ -4,7 +4,7 @@ npm install -g json-server
 
 ## run
 
-json-server --watch products.json
+json-server --watch product.json
 
 ## document
 
