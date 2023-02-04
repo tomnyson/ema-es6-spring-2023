@@ -148,7 +148,7 @@ if (inputSearch) {
   });
 }
 const rootHtml = document.querySelector("#root");
-router("/");
+// router("/");
 inputSearch.addEventListener("focus", () => {
   console.log("show input search");
   const searchModal = document.querySelector(".search_modal");
@@ -219,3 +219,24 @@ const handleDelete = () => {
     })
   );
 };
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  console.log("DOMContent");
+  const btn_login = document.querySelector("#btn_login");
+  console.log("btn_login", btn_login);
+  if (btn_login) {
+    btn_login.addEventListener("click", function (e) {
+      e.preventDefault();
+      alert("show login form");
+      return false;
+    });
+  }
+});
+
+const btn = document.querySelector("#btn-login");
+if (btn) {
+  btn.addEventListener("click", () => {
+    rootHtml.innerHTML = router("/login");
+    window.history.pushState({}, null, `/login`);
+  });
+}

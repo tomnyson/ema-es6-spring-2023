@@ -105,12 +105,32 @@ const viewDetail = (detail) => {
 const view404 = () => {
   return `<div></h1>page not found </h1></div>`;
 };
+const viewLogin = () => {
+  return `
+  <div class="offset-3 col-md-6">
+    <h3>Login</h3>
+    <form>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    </div>
+    `;
+};
 export const router = (path = "/", data = {}) => {
   switch (path) {
     case "/":
       return viewHome(data);
     case "/detail":
       return viewDetail(data);
+    case "/login":
+      return viewLogin(data);
     default:
       return view404();
   }
