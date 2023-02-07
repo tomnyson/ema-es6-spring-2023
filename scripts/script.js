@@ -238,5 +238,32 @@ if (btn) {
   btn.addEventListener("click", () => {
     rootHtml.innerHTML = router("/login");
     window.history.pushState({}, null, `/login`);
+    xuLyLogin();
   });
 }
+
+const xuLyLogin = () => {
+  const elUsername = document.getElementById("username");
+  const elPassword = document.getElementById("password");
+  const elButtonLogin = document.getElementById("btn-login-submit");
+  const elErros = document.getElementById("errors");
+  const errors = [];
+  elButtonLogin.addEventListener("click", () => {
+    if (elUsername.value.trim() === "") {
+      errors.push("user not empty");
+    }
+    if (elPassword.value.trim() === "") {
+      errors.push("password not empty");
+    }
+    if (errors.length > 0) {
+      // show error message
+      elErros.innerHTML = errors.join("</br>");
+      return;
+    } else {
+      // dang nhap thanh cong
+      
+    }
+    console.log(elPassword.value);
+    console.log(elUsername.value);
+  });
+};

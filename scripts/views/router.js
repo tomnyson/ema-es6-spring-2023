@@ -118,7 +118,8 @@ const viewLogin = () => {
       <label for="password">Password:</label>
       <input type="password" class="form-control" id="password">
     </div>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <p style="color:red" id="errors"></p>
+    <button id="btn-login-submit" type="button" class="btn btn-primary">Login</button>
     </form>
     </div>
     `;
