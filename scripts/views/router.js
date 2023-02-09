@@ -1,3 +1,25 @@
+const viewRegister = () => {
+  return `
+  <div class="offset-3 col-md-6">
+    <h3>Register</h3>
+    <form>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <p style="color:red" id="errors"></p>
+        <button id="btn-register-submit" type="button" class="btn btn-primary">Register</button>
+    </form>
+</div>`;
+};
 const viewHome = (data) => {
   return `
     <div class="row">
@@ -132,6 +154,8 @@ export const router = (path = "/", data = {}) => {
       return viewDetail(data);
     case "/login":
       return viewLogin(data);
+    case "/register":
+      return viewRegister(data);
     default:
       return view404();
   }

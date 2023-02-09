@@ -242,7 +242,62 @@ if (btn) {
   });
 }
 
+const btnRegister = document.querySelector("#btn-register");
+if (btnRegister) {
+  btnRegister.addEventListener("click", () => {
+    rootHtml.innerHTML = router("/register");
+    window.history.pushState({}, null, `/register`);
+    xuLyRegister();
+  });
+}
+
 const xuLyLogin = () => {
+  const elUsername = document.getElementById("username");
+  const elPassword = document.getElementById("password");
+  const elButtonLogin = document.getElementById("btn-login-submit");
+  const elErros = document.getElementById("errors");
+  const errors = [];
+  console.log("elButtonLogin", elButtonLogin);
+  elButtonLogin.addEventListener("click", async (event) => {
+    event.preventDefault();
+    if (elUsername.value.trim() === "") {
+      errors.push("user not empty");
+    }
+    if (elPassword.value.trim() === "") {
+      errors.push("password not empty");
+    }
+    if (errors.length > 0) {
+      // show error message
+      elErros.innerHTML = errors.join("</br>");
+      return;
+    } else {
+      // dang nhap thanh cong
+      const isLogin = await ManagerUser.login(
+        elUsername.value,
+        elPassword.value
+      );
+      //   $(".navbar-nav").append(` <li class="nav-item">
+      //   <a id="btn-logout" class="nav-link" href="#">Logout</a>
+      // </li>`);
+      if (isLogin) {
+        const navigation = document.querySelector(".navbar-nav");
+        navigation.insertAdjacentHTML(
+          "beforeend",
+          `<li class="nav-item">
+        <a id="btn-logout" class="nav-link" href="#">Logout</a>
+        </li>`
+        );
+      }
+    }
+  });
+};
+/**
+ * get username, password, email
+ * kiem tra user ton tai chua ?
+ * co -> thong bao
+ * chua -> luu vao db -> chuyen ve dang nhap
+ */
+const xuLyRegister = () => {
   const elUsername = document.getElementById("username");
   const elPassword = document.getElementById("password");
   const elButtonLogin = document.getElementById("btn-login-submit");
@@ -292,8 +347,8 @@ const checkUser = () => {
     navigation.insertAdjacentHTML(
       "beforeend",
       `<li class="nav-item">
-    <a id="btn-logout" class="nav-link" href="#">(hi: ${user.username})Logout</a>
-    </li>`
+      <a class="nav-link" href="#">Logout</a>
+      </li>`
     );
     // View Login
   } else {
@@ -315,3 +370,5 @@ const logout = () => {
   }
 };
 logout();
+
+const handleRegister = () => {};
