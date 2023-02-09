@@ -1,5 +1,6 @@
 import products from "../product.json";
 import ManagerProduct from "./mangerProduct.js";
+import ManagerUser from "./mangerUser.js";
 import { debounce } from "./helper/helper";
 import { router } from "./views/router.js";
 
@@ -70,7 +71,6 @@ console.log(map);
 let productList = [];
 (async () => {
   await ManagerProduct.getAll();
-  console.log(ManagerProduct.products);
   printHtml(ManagerProduct.products);
   productList = ManagerProduct.products;
 })();
@@ -248,7 +248,9 @@ const xuLyLogin = () => {
   const elButtonLogin = document.getElementById("btn-login-submit");
   const elErros = document.getElementById("errors");
   const errors = [];
-  elButtonLogin.addEventListener("click", () => {
+  console.log("elButtonLogin", elButtonLogin);
+  elButtonLogin.addEventListener("click", async (event) => {
+    event.preventDefault();
     if (elUsername.value.trim() === "") {
       errors.push("user not empty");
     }
@@ -261,9 +263,42 @@ const xuLyLogin = () => {
       return;
     } else {
       // dang nhap thanh cong
-      
+      const isLogin = await ManagerUser.Login(
+        elUsername.value,
+        elPassword.value
+      );
+      //   $(".navbar-nav").append(` <li class="nav-item">
+      //   <a id="btn-logout" class="nav-link" href="#">Logout</a>
+      // </li>`);
+      console.log("isLogin", isLogin);
+      if (isLogin) {
+        const navigation = document.querySelector(".navbar-nav");
+        navigation.insertAdjacentHTML(
+          "beforeend",
+          `<li class="nav-item">
+        <a id="btn-logout" class="nav-link" href="#">Logout</a>
+        </li>`
+        );
+      }
     }
-    console.log(elPassword.value);
-    console.log(elUsername.value);
   });
 };
+
+const checkUser = () => {
+  const isLogin = ManagerUser.checkLogin();
+  if (isLogin) {
+    const user = ManagerUser.getUser();
+    console.log("user", user);
+    const navigation = document.querySelector(".navbar-nav");
+    navigation.insertAdjacentHTML(
+      "beforeend",
+      `<li class="nav-item">
+    <a id="btn-logout" class="nav-link" href="#">(hi: ${user.username})Logout</a>
+    </li>`
+    );
+    // View Login
+  } else {
+    // View Gest
+  }
+};
+checkUser();

@@ -108,7 +108,7 @@ const view404 = () => {
 const viewLogin = () => {
   return `
   <div class="offset-3 col-md-6">
-    <h3>Login</h3>
+    <h3>Login Page</h3>
     <form>
     <div class="form-group">
       <label for="username">Username:</label>

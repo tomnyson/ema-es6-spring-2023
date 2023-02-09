@@ -14,3 +14,7 @@ const apiProvider = (url, method, body = {}) =>
 export const fetchProduct = async (url, method) => {
   return await apiProvider(url, "GET");
 };
+
+export const fetchUser = async (url, method) => {
+  return await apiProvider(url, method);
+};
