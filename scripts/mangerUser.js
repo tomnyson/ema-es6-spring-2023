@@ -5,11 +5,11 @@ import { LoginUser } from "./services/userServices";
 const USER_KEY = "user";
 class ManagerUser {
   // constructor(username, password) {}
-  static async login() {
+  static async getAll() {
     const data = await getAll();
     this.products = data;
   }
-  static async Login(username, password) {
+  static async login(username, password) {
     console.log("isLogin call");
     const data = await LoginUser(username, password);
     console.log("data", data.length);
@@ -36,6 +36,11 @@ class ManagerUser {
       return JSON.parse(localStorage.getItem(USER_KEY));
     }
     return null;
+  }
+  static logout() {
+    if (localStorage.getItem(USER_KEY)) {
+      localStorage.removeItem(USER_KEY);
+    }
   }
 }
 

@@ -263,14 +263,13 @@ const xuLyLogin = () => {
       return;
     } else {
       // dang nhap thanh cong
-      const isLogin = await ManagerUser.Login(
+      const isLogin = await ManagerUser.login(
         elUsername.value,
         elPassword.value
       );
       //   $(".navbar-nav").append(` <li class="nav-item">
       //   <a id="btn-logout" class="nav-link" href="#">Logout</a>
       // </li>`);
-      console.log("isLogin", isLogin);
       if (isLogin) {
         const navigation = document.querySelector(".navbar-nav");
         navigation.insertAdjacentHTML(
@@ -289,7 +288,7 @@ const checkUser = () => {
   if (isLogin) {
     const user = ManagerUser.getUser();
     console.log("user", user);
-    const navigation = document.querySelector(".navbar-nav");
+    const navigation = document.querySelector(".menu-right");
     navigation.insertAdjacentHTML(
       "beforeend",
       `<li class="nav-item">
@@ -302,3 +301,17 @@ const checkUser = () => {
   }
 };
 checkUser();
+
+const logout = () => {
+  const el = document.getElementById("btn-logout");
+  console.log("el", el);
+  if (el) {
+    el.addEventListener("click", () => {
+      ManagerUser.logout();
+      rootHtml.innerHTML = router("/login");
+      window.history.pushState({}, null, `/login`);
+      el.remove();
+    });
+  }
+};
+logout();
