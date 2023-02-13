@@ -59,3 +59,9 @@ title
 : 
 "Dignissimos aut veritatis dolorem eligendi animi deleniti."
 ```
+
+### xây dựng chức năng 
+tìm kiếm
+lấy danh sách
+detail 
+dựa vào api blog.json
