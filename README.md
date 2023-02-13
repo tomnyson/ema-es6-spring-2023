@@ -65,3 +65,4 @@ tìm kiếm
 lấy danh sách
 detail 
 dựa vào api blog.json
+theme example https://baomoi.com/the-gioi.epi
