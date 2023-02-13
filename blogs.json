@@ -1,0 +1,515 @@
+{
+    "items": [
+        {
+            "id": 45027971,
+            "contentId": 45027971,
+            "title": "Mỹ phát hiện thêm nhiều vật thể bay không xác định",
+            "description": "Lầu Năm Góc cho biết máy bay chiến đấu của quân đội Mỹ ngày 12/2 (giờ địa phương) đã bắn hạ một vật thể hình bát giác trên Hồ Huron, vụ việc mới nhất sau khi một khí cầu của Trung Quốc bị bắn hạ tuần trước.",
+            "date": 1676257020,
+            "url": "/my-phat-hien-them-nhieu-vat-the-bay-khong-xac-dinh/c/45027971.epi",
+            "redirectUrl": "/my-phat-hien-them-nhieu-vat-the-bay-khong-xac-dinh/r/45027971.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_5_45027971/16f04f654228ab76f239.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_5_45027971/16f04f654228ab76f239.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/3a2a57458a0663583a17.png",
+                "icon": "https://photo-baomoi.bmcdn.me/da70a0404203ab5df212.png",
+                "width": 232,
+                "height": 64,
+                "url": "/bao-cong-an-nhan-dan/p/5.epi",
+                "name": "Báo Công An Nhân Dân"
+            },
+            "index": 0,
+            "cluster": {
+                "id": 34061951,
+                "objectType": 5,
+                "name": "#hồ Huron",
+                "url": "/ho-huron/t/34061951.epi",
+                "total": 54
+            }
+        },
+        {
+            "id": 45028031,
+            "contentId": 45028031,
+            "title": "Trung Quốc chuẩn bị bắn hạ vật thể bay không xác định trên bầu trời",
+            "description": "Ngày 12/2, truyền thông Trung Quốc đưa tin một vật thể bay không xác định được phát hiện tại vùng biển gần thành phố cảng Thanh Đảo.",
+            "date": 1676257020,
+            "url": "/trung-quoc-chuan-bi-ban-ha-vat-the-bay-khong-xac-dinh-tren-bau-troi/c/45028031.epi",
+            "redirectUrl": "/trung-quoc-chuan-bi-ban-ha-vat-the-bay-khong-xac-dinh-tren-bau-troi/r/45028031.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_30_45028031/275d33c73e8ad7d48e9b.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_30_45028031/275d33c73e8ad7d48e9b.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/c6b35edd839e6ac0338f.png",
+                "icon": "https://photo-baomoi.bmcdn.me/b1411bda3b97d2c98b86.png",
+                "width": 228,
+                "height": 64,
+                "url": "/bao-giao-thong/p/30.epi",
+                "name": "Báo Giao Thông"
+            },
+            "index": 1,
+            "cluster": {
+                "id": 34082508,
+                "objectType": 5,
+                "name": "#Thanh Đảo",
+                "url": "/thanh-dao/t/34082508.epi",
+                "total": 6
+            }
+        },
+        {
+            "id": 45027776,
+            "contentId": 45027776,
+            "title": "Nhóm cứu hộ Israel gấp rút rời Thổ Nhĩ Kỳ sau tin tình báo đe dọa an ninh",
+            "description": "Nhóm tìm kiếm và cứu nạn United Hatzalah của Israel đã rời Thổ Nhĩ Kỳ sau khi nhận được thông tin tình báo cho rằng nhóm đang đối mặt 'mối đe dọa an ninh nghiêm trọng'.",
+            "date": 1676256909,
+            "url": "/nhom-cuu-ho-israel-gap-rut-roi-tho-nhi-ky-sau-tin-tinh-bao-de-doa-an-ninh/c/45027776.epi",
+            "redirectUrl": "/nhom-cuu-ho-israel-gap-rut-roi-tho-nhi-ky-sau-tin-tinh-bao-de-doa-an-ninh/r/45027776.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_114_45027776/a7e9217d2c30c56e9c21.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_114_45027776/a7e9217d2c30c56e9c21.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/f12dd0420d01e45fbd10.png",
+                "icon": "https://photo-baomoi.bmcdn.me/24d2b8499804715a2815.png",
+                "width": 176,
+                "height": 64,
+                "url": "/bao-phap-luat-tp-hcm/p/114.epi",
+                "name": "Báo Pháp Luật TP.HCM"
+            },
+            "index": 2,
+            "cluster": {
+                "id": 33965061,
+                "objectType": 5,
+                "name": "#thổ nhĩ kỳ",
+                "url": "/tho-nhi-ky/t/33965061.epi",
+                "total": 1253
+            }
+        },
+        {
+            "id": 45027767,
+            "contentId": 45027767,
+            "title": "Những chú chó cứu hộ anh hùng trong trận động đất thảm họa",
+            "description": "Chó luôn là một trong những anh hùng của nỗ lực tìm kiếm và cứu nạn sau trận động đất. Những chú chó tìm kiếm và cứu nạn được huấn luyện đặc biệt đã cứu sống nhiều người khỏi đống đổ nát trong trận động đất tại Thổ Nhĩ Kì và Syria.",
+            "date": 1676256898,
+            "url": "/nhung-chu-cho-cuu-ho-anh-hung-trong-tran-dong-dat-tham-hoa/c/45027767.epi",
+            "redirectUrl": "/nhung-chu-cho-cuu-ho-anh-hung-trong-tran-dong-dat-tham-hoa/r/45027767.epi",
+            "thumb": "https://gif-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_15_45027767/f6fb7b6f76229f7cc633.gif",
+            "thumbL": "https://gif-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_15_45027767/f6fb7b6f76229f7cc633.gif",
+            "contentTypes": [
+                2
+            ],
+            "classNames": " is-video",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/0b89da8919caf094a9db.png",
+                "icon": "https://photo-baomoi.bmcdn.me/66e403cb3986d0d88997.png",
+                "width": 236,
+                "height": 64,
+                "url": "/bao-nguoi-lao-dong/p/15.epi",
+                "name": "Báo Người Lao Động"
+            },
+            "thumbIsGif": true,
+            "index": 3,
+            "cluster": {
+                "id": 33965061,
+                "objectType": 5,
+                "name": "#thổ nhĩ kỳ",
+                "url": "/tho-nhi-ky/t/33965061.epi",
+                "total": 1253
+            }
+        },
+        {
+            "id": 45027888,
+            "contentId": 45027888,
+            "title": "Mỹ bắn hạ vật thể bí ẩn thứ 3 lảng vảng quanh các địa điểm quân sự nhạy cảm",
+            "description": "Vật thể hình bát giác đang di chuyển ở độ cao 6.100 m, phía trên hồ Huron, Michigan, đông bắc nước Mỹ, giáp biên giới với Canada. Trước đó, vật thể xuất hiện gần các địa điểm quân sự nhạy cảm ở Montana, khiến Mỹ phải đóng cửa không phận.",
+            "date": 1676256660,
+            "url": "/my-ban-ha-vat-the-bi-an-thu-3-lang-vang-quanh-cac-dia-diem-quan-su-nhay-cam/c/45027888.epi",
+            "redirectUrl": "/my-ban-ha-vat-the-bi-an-thu-3-lang-vang-quanh-cac-dia-diem-quan-su-nhay-cam/r/45027888.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_258_45027888/f23a35af38e2d1bc88f3.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_258_45027888/f23a35af38e2d1bc88f3.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/efd5a3ba7ef997a7cee8.png",
+                "icon": "https://photo-baomoi.bmcdn.me/513c7a0c984f7111285e.png",
+                "width": 148,
+                "height": 64,
+                "url": "/bao-bao-ve-phap-luat/p/258.epi",
+                "name": "Báo Bảo Vệ Pháp Luật"
+            },
+            "index": 4,
+            "cluster": {
+                "id": 34061951,
+                "objectType": 5,
+                "name": "#hồ Huron",
+                "url": "/ho-huron/t/34061951.epi",
+                "total": 54
+            }
+        },
+        {
+            "id": 45027889,
+            "contentId": 45027889,
+            "title": "Thổ Nhĩ Kỳ bắt giữ hơn 130 người liên quan đến các tòa nhà bị sập trong trận động đất",
+            "description": "Những người bị bắt giữ chủ yếu là nhà thầu xây dựng, trong đó một số bị cáo buộc đã cắt giảm các trụ chịu lực khi thi công các tòa nhà dân cư, điều làm gia tăng mức độ tàn phá của động đất.",
+            "date": 1676256600,
+            "url": "/tho-nhi-ky-bat-giu-hon-130-nguoi-lien-quan-den-cac-toa-nha-bi-sap-trong-tran-dong-dat/c/45027889.epi",
+            "redirectUrl": "/tho-nhi-ky-bat-giu-hon-130-nguoi-lien-quan-den-cac-toa-nha-bi-sap-trong-tran-dong-dat/r/45027889.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_258_45027889/f3f033653e28d7768e39.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_258_45027889/f3f033653e28d7768e39.jpg",
+            "contentTypes": [
+                2
+            ],
+            "classNames": " is-video",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/efd5a3ba7ef997a7cee8.png",
+                "icon": "https://photo-baomoi.bmcdn.me/513c7a0c984f7111285e.png",
+                "width": 148,
+                "height": 64,
+                "url": "/bao-bao-ve-phap-luat/p/258.epi",
+                "name": "Báo Bảo Vệ Pháp Luật"
+            },
+            "index": 5,
+            "cluster": {
+                "id": 34056928,
+                "objectType": 5,
+                "name": "#AFAD",
+                "url": "/afad/t/34056928.epi",
+                "total": 7
+            }
+        },
+        {
+            "id": 45027685,
+            "contentId": 45027685,
+            "title": "Mỹ bắt đầu chuyển Reaper Ba Lan, áp sát điểm nóng",
+            "description": "Việc máy bay tấn công không người lái (UCAV) MQ-9A Reaper đến Ba Lan được coi là mối đe dọa nhằm vào Nga.",
+            "date": 1676256300,
+            "url": "/my-bat-dau-chuyen-reaper-ba-lan-ap-sat-diem-nong/c/45027685.epi",
+            "redirectUrl": "/my-bat-dau-chuyen-reaper-ba-lan-ap-sat-diem-nong/r/45027685.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_181_45027685/1e288bbf86f26fac36e3.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_181_45027685/1e288bbf86f26fac36e3.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/a1aed5c10882e1dcb893.png",
+                "icon": "https://photo-baomoi.bmcdn.me/3a620152e3110a4f5300.png",
+                "width": 116,
+                "height": 64,
+                "url": "/bao-giao-duc-thoi-dai/p/181.epi",
+                "name": "Báo Giáo Dục & Thời Đại"
+            },
+            "index": 6,
+            "cluster": {
+                "id": 34090363,
+                "objectType": 5,
+                "name": "Tin liên quan",
+                "url": "/tin-lien-quan/t/34090363.epi",
+                "total": 0
+            }
+        },
+        {
+            "id": 45027972,
+            "contentId": 45027972,
+            "title": "Người Tây Bắc Syria 'chết mòn' chờ cứu hộ",
+            "description": "Dù hứng thiệt hại nặng nề sau các trận động đất xảy ra tuần trước, nhưng hàng ngàn người dân trong vùng thảm họa ở Tây Bắc Syria chưa nhận được sự giúp đỡ cần thiết do bất ổn và bất đồng.",
+            "date": 1676256240,
+            "url": "/nguoi-tay-bac-syria-chet-mon-cho-cuu-ho/c/45027972.epi",
+            "redirectUrl": "/nguoi-tay-bac-syria-chet-mon-cho-cuu-ho/r/45027972.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_5_45027972/eaeaa07fad32446c1d23.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_5_45027972/eaeaa07fad32446c1d23.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/3a2a57458a0663583a17.png",
+                "icon": "https://photo-baomoi.bmcdn.me/da70a0404203ab5df212.png",
+                "width": 232,
+                "height": 64,
+                "url": "/bao-cong-an-nhan-dan/p/5.epi",
+                "name": "Báo Công An Nhân Dân"
+            },
+            "index": 7,
+            "cluster": {
+                "id": 33965061,
+                "objectType": 5,
+                "name": "#thổ nhĩ kỳ",
+                "url": "/tho-nhi-ky/t/33965061.epi",
+                "total": 1253
+            }
+        },
+        {
+            "id": 45027686,
+            "contentId": 45027686,
+            "title": "Trung Quốc sắp bắn hạ UFO ở Sơn Đông",
+            "description": "Nhà chức trách Trung Quốc được cho là đang chuẩn bị bắn hạ một 'vật thể bay không xác định' (UFO) gần thành phố biển Nhật Chiếu, tỉnh Sơn Đông.",
+            "date": 1676256000,
+            "url": "/trung-quoc-sap-ban-ha-ufo-o-son-dong/c/45027686.epi",
+            "redirectUrl": "/trung-quoc-sap-ban-ha-ufo-o-son-dong/r/45027686.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_181_45027686/a84e3fd93294dbca8285.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_181_45027686/a84e3fd93294dbca8285.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/a1aed5c10882e1dcb893.png",
+                "icon": "https://photo-baomoi.bmcdn.me/3a620152e3110a4f5300.png",
+                "width": 116,
+                "height": 64,
+                "url": "/bao-giao-duc-thoi-dai/p/181.epi",
+                "name": "Báo Giáo Dục & Thời Đại"
+            },
+            "index": 8,
+            "cluster": {
+                "id": 33907571,
+                "objectType": 5,
+                "name": "#Joe Biden",
+                "url": "/joe-biden/t/33907571.epi",
+                "total": 358
+            }
+        },
+        {
+            "id": 45027640,
+            "contentId": 45027640,
+            "title": "Thụy Điển tiêu hủy 8,5 triệu liều vaccine ngừa COVID-19",
+            "description": "Truyền thông địa phương Thụy Điển ngày 12/2 đưa tin nước này đã tiêu hủy gần 8,5 triệu liều vaccine ngừa COVID-19.",
+            "date": 1676255940,
+            "url": "/thuy-dien-tieu-huy-8-5-trieu-lieu-vaccine-ngua-covid-19/c/45027640.epi",
+            "redirectUrl": "/thuy-dien-tieu-huy-8-5-trieu-lieu-vaccine-ngua-covid-19/r/45027640.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_294_45027640/0d99e18a60c88996d0d9.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_294_45027640/0d99e18a60c88996d0d9.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/bb071048550abc54e51b.png",
+                "icon": "https://photo-baomoi.bmcdn.me/34aa9b9d79de9080c9cf.png",
+                "width": 144,
+                "height": 64,
+                "url": "/bao-tin-tuc-ttxvn/p/294.epi",
+                "name": "Báo Tin Tức TTXVN"
+            },
+            "index": 9,
+            "cluster": {
+                "id": 20672800,
+                "objectType": 5,
+                "name": "#vaccine ngừa Covid-19",
+                "url": "/vaccine-ngua-covid-19/t/20672800.epi",
+                "total": 329
+            }
+        },
+        {
+            "id": 45027671,
+            "contentId": 45027671,
+            "title": "Quan chức Ukraine: Nga pháo kích miền Đông với mức độ kỷ lục",
+            "description": "Người phát ngôn của quân đội Ukraine ngày 12/2 cho biết, Nga đã lập kỷ lục về các vụ pháo kích khi liên tiếp tấn công lực lượng Ukraine bằng hỏa lực đạn pháo ở phía Đông.",
+            "date": 1676255940,
+            "url": "/quan-chuc-ukraine-nga-phao-kich-mien-dong-voi-muc-do-ky-luc/c/45027671.epi",
+            "redirectUrl": "/quan-chuc-ukraine-nga-phao-kich-mien-dong-voi-muc-do-ky-luc/r/45027671.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_65_45027671/0ef74d61402ca972f03d.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_65_45027671/0ef74d61402ca972f03d.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/a1493a27e7640e3a5775.png",
+                "icon": "https://photo-baomoi.bmcdn.me/5106330fa14d4813115c.png",
+                "width": 128,
+                "height": 64,
+                "url": "/bao-vov/p/65.epi",
+                "name": "Báo VOV"
+            },
+            "index": 10,
+            "cluster": {
+                "id": 25804752,
+                "objectType": 5,
+                "name": "#liên bang Nga",
+                "url": "/lien-bang-nga/t/31528056.epi",
+                "total": 744
+            }
+        },
+        {
+            "id": 45027589,
+            "contentId": 45027589,
+            "title": "Tiêm kích Mỹ bắn hạ vật thể bay trên Hồ Huron gần Canada",
+            "description": "Lầu Năm Góc thông báo, máy bay chiến đấu của quân đội Mỹ ngày 12-2-2023 đã bắn hạ một vật thể hình bát giác bay trên Hồ Huron ở biên giới Mỹ-Canada.",
+            "date": 1676255871,
+            "url": "/tiem-kich-my-ban-ha-vat-the-bay-tren-ho-huron-gan-canada/c/45027589.epi",
+            "redirectUrl": "/tiem-kich-my-ban-ha-vat-the-bay-tren-ho-huron-gan-canada/r/45027589.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_106_45027589/63edf77bfa3613684a27.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_106_45027589/63edf77bfa3613684a27.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/579c7af3a7b04eee17a1.png",
+                "icon": "https://photo-baomoi.bmcdn.me/0ed3eae308a0e1feb8b1.png",
+                "width": 116,
+                "height": 64,
+                "url": "/chuyen-trang-an-ninh-thu-do-bao-cong-an-nhan-dan/p/106.epi",
+                "name": "Chuyên trang An Ninh Thủ Đô - Báo Công an nhân dân"
+            },
+            "index": 11,
+            "cluster": {
+                "id": 34061951,
+                "objectType": 5,
+                "name": "#hồ Huron",
+                "url": "/ho-huron/t/34061951.epi",
+                "total": 54
+            }
+        },
+        {
+            "id": 45027559,
+            "contentId": 45027559,
+            "title": "Nóng Nga-Ukraine 13-2: Moscow khoe chiến tích; Ukraine nói Nga không dễ phát động đợt tấn công mới",
+            "description": "Moscow khoe chiến tích mới; Ukraine nói Nga 'đang gặp vấn đề'; Ủy ban Olympic quốc tế bác lời kêu gọi của Tổng thống Ukraine,...",
+            "date": 1676255810,
+            "url": "/nong-nga-ukraine-13-2-moscow-khoe-chien-tich-ukraine-noi-nga-khong-de-phat-dong-dot-tan-cong-moi/c/45027559.epi",
+            "redirectUrl": "/nong-nga-ukraine-13-2-moscow-khoe-chien-tich-ukraine-noi-nga-khong-de-phat-dong-dot-tan-cong-moi/r/45027559.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2/2023_02_13_114_45027559/f8d09f41920c7b52221d.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9/2023_02_13_114_45027559/f8d09f41920c7b52221d.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/f12dd0420d01e45fbd10.png",
+                "icon": "https://photo-baomoi.bmcdn.me/24d2b8499804715a2815.png",
+                "width": 176,
+                "height": 64,
+                "url": "/bao-phap-luat-tp-hcm/p/114.epi",
+                "name": "Báo Pháp Luật TP.HCM"
+            },
+            "index": 12,
+            "cluster": {
+                "id": 31528056,
+                "objectType": 5,
+                "name": "#liên bang Nga",
+                "url": "/lien-bang-nga/t/31528056.epi",
+                "total": 2658
+            }
+        },
+        {
+            "id": 45027655,
+            "contentId": 45027655,
+            "title": "Hàng nghìn phụ nữ Nhật bị quay lén khi tắm ở suối nước nóng",
+            "description": "Người dân Nhật Bản sốc trước vụ bắt giữ 16 người liên quan đến mạng lưới quay lén và chia sẻ hình ảnh phụ nữ tắm trong suối nước nóng trên khắp đất nước suốt ba thập kỷ.",
+            "date": 1676256133,
+            "url": "/hang-nghin-phu-nu-nhat-bi-quay-len-khi-tam-o-suoi-nuoc-nong/c/45027655.epi",
+            "redirectUrl": "/hang-nghin-phu-nu-nhat-bi-quay-len-khi-tam-o-suoi-nuoc-nong/r/45027655.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_119_45027655/1f7f44e949a4a0faf9b5.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_119_45027655/1f7f44e949a4a0faf9b5.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/d59db7f26ab183efdaa0.png",
+                "icon": "https://photo-baomoi.bmcdn.me/d5de484568088156d819.png",
+                "width": 124,
+                "height": 64,
+                "url": "/tap-chi-tri-thuc-truc-tuyen/p/119.epi",
+                "name": "Tạp chí Tri Thức Trực Tuyến"
+            },
+            "index": 13,
+            "cluster": {
+                "id": 33994307,
+                "objectType": 5,
+                "name": "Tin liên quan",
+                "url": "/tin-lien-quan/t/33994307.epi",
+                "total": 2
+            }
+        },
+        {
+            "id": 45027565,
+            "contentId": 45027565,
+            "title": "Thổ Nhĩ Kỳ xử lý các công ty xây dựng sau thảm họa động đất",
+            "description": "Khi số người thiệt mạng trong trận động đất kinh hoàng tại Thổ Nhĩ Kỳ và Syria vẫn đang tiếp tục tăng lên hơn 33.000 người, chính phủ Thổ Nhĩ Kỳ đã bắt đầu thực hiện các hành động pháp lý với các công ty xây dựng.",
+            "date": 1676255520,
+            "url": "/tho-nhi-ky-xu-ly-cac-cong-ty-xay-dung-sau-tham-hoa-dong-dat/c/45027565.epi",
+            "redirectUrl": "/tho-nhi-ky-xu-ly-cac-cong-ty-xay-dung-sau-tham-hoa-dong-dat/r/45027565.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_595_45027565/b619ed88e0c5099b50d4.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_595_45027565/b619ed88e0c5099b50d4.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/3ae21ea59be772b92bf6.png",
+                "icon": "https://photo-baomoi.bmcdn.me/e6412405a14748191156.png",
+                "width": 104,
+                "height": 64,
+                "url": "/tap-chi-mekong-asean/p/595.epi",
+                "name": "Tạp chí Mekong Asean"
+            },
+            "index": 14,
+            "cluster": {
+                "id": 33965061,
+                "objectType": 5,
+                "name": "#thổ nhĩ kỳ",
+                "url": "/tho-nhi-ky/t/33965061.epi",
+                "total": 1253
+            }
+        },
+        {
+            "id": 45027560,
+            "contentId": 45027560,
+            "title": "Trung Quốc cũng tuyên bố phát hiện và 'chuẩn bị bắn hạ' vật thể bay lạ",
+            "description": "Trong bối cảnh Mỹ và Canada liên tiếp phát hiện và bắn hạ các vật thể bay lạ những ngày qua, Trung Quốc hôm qua (12/2) cũng đưa ra thông báo về việc phát hiện và chuẩn bị bắn hạ vật thể bay không xác định ở vùng biển phía Đông nước này.",
+            "date": 1676255400,
+            "url": "/trung-quoc-cung-tuyen-bo-phat-hien-va-chuan-bi-ban-ha-vat-the-bay-la/c/45027560.epi",
+            "redirectUrl": "/trung-quoc-cung-tuyen-bo-phat-hien-va-chuan-bi-ban-ha-vat-the-bay-la/r/45027560.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2/2023_02_13_65_45027560/a4dc549946d4af8af6c5.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9/2023_02_13_65_45027560/a4dc549946d4af8af6c5.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/a1493a27e7640e3a5775.png",
+                "icon": "https://photo-baomoi.bmcdn.me/5106330fa14d4813115c.png",
+                "width": 128,
+                "height": 64,
+                "url": "/bao-vov/p/65.epi",
+                "name": "Báo VOV"
+            },
+            "index": 15,
+            "cluster": {
+                "id": 34061951,
+                "objectType": 5,
+                "name": "#hồ Huron",
+                "url": "/ho-huron/t/34061951.epi",
+                "total": 54
+            }
+        },
+        {
+            "id": 45027417,
+            "contentId": 45027417,
+            "title": "Tướng Mỹ không loại trừ khả năng các UFO từ người ngoài hành tinh",
+            "description": "Tướng Mỹ Glen VanHerck nói ông không loại trừ khả năng các vật thể không xác định bị bắn hạ vừa qua là từ người ngoài hành tinh và dẫn đầu nhiệm vụ tìm đáp án cho tình báo Mỹ.",
+            "date": 1676255730,
+            "url": "/tuong-my-khong-loai-tru-kha-nang-cac-ufo-tu-nguoi-ngoai-hanh-tinh/c/45027417.epi",
+            "redirectUrl": "/tuong-my-khong-loai-tru-kha-nang-cac-ufo-tu-nguoi-ngoai-hanh-tinh/r/45027417.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2_sm/2023_02_13_119_45027417/f56512f51fb8f6e6afa9.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9_sm/2023_02_13_119_45027417/f56512f51fb8f6e6afa9.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/d59db7f26ab183efdaa0.png",
+                "icon": "https://photo-baomoi.bmcdn.me/d5de484568088156d819.png",
+                "width": 124,
+                "height": 64,
+                "url": "/tap-chi-tri-thuc-truc-tuyen/p/119.epi",
+                "name": "Tạp chí Tri Thức Trực Tuyến"
+            },
+            "index": 16,
+            "cluster": {
+                "id": 34061951,
+                "objectType": 5,
+                "name": "#hồ Huron",
+                "url": "/ho-huron/t/34061951.epi",
+                "total": 54
+            }
+        },
+        {
+            "id": 45027413,
+            "contentId": 45027413,
+            "title": "Số người chết vì động đất lên tới 33.000, nội chiến Syria cản trở cứu trợ",
+            "description": "Lực lượng cứu hộ đã kéo thêm nhiều người sống sót khỏi đống đổ nát khi Thổ Nhĩ Kỳ bắt đầu các hành động pháp lý.",
+            "date": 1676254971,
+            "url": "/so-nguoi-chet-vi-dong-dat-len-toi-33-000-noi-chien-syria-can-tro-cuu-tro/c/45027413.epi",
+            "redirectUrl": "/so-nguoi-chet-vi-dong-dat-len-toi-33-000-noi-chien-syria-can-tro-cuu-tro/r/45027413.epi",
+            "thumb": "https://photo-baomoi.bmcdn.me/w300_r3x2/2023_02_13_35_45027413/e6d30b43060eef50b61f.jpg",
+            "thumbL": "https://photo-baomoi.bmcdn.me/w700_r16x9/2023_02_13_35_45027413/e6d30b43060eef50b61f.jpg",
+            "classNames": "",
+            "publisher": {
+                "logo": "https://photo-baomoi.bmcdn.me/1efe2391fed2178c4ec3.png",
+                "icon": "https://photo-baomoi.bmcdn.me/0deb80db62988bc6d289.png",
+                "width": 244,
+                "height": 64,
+                "url": "/bao-cong-thuong/p/35.epi",
+                "name": "Báo Công Thương"
+            },
+            "index": 17,
+            "cluster": {
+                "id": 33965061,
+                "objectType": 5,
+                "name": "#thổ nhĩ kỳ",
+                "url": "/tho-nhi-ky/t/33965061.epi",
+                "total": 1253
+            }
+        }
+    ]
+}
