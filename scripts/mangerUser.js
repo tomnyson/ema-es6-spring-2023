@@ -3,6 +3,8 @@
 import { LoginUser } from "./services/userServices";
 
 const USER_KEY = "user";
+const ROUTE_USER = ["profile", "checkout"];
+const ROUTER_GUEST = ["", "detail", "register", "forgot", "login"];
 class ManagerUser {
   // constructor(username, password) {}
   static async getAll() {
@@ -45,6 +47,19 @@ class ManagerUser {
     if (localStorage.getItem(USER_KEY)) {
       localStorage.removeItem(USER_KEY);
     }
+  }
+
+  static checkPermission(role, path) {
+    if (role === "admin") {
+      return true;
+    }
+    if (role === "user" && ROUTE_USER.includes(path)) {
+      return true;
+    }
+    if (role === null && ROUTER_GUEST.includes(path)) {
+      return true;
+    }
+    return false;
   }
 }
 

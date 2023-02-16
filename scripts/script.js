@@ -392,6 +392,16 @@ window.addEventListener("load", (event) => {
   });
 });
 
+window.onpopstate = history.onpushstate = function (e) {
+  const path = window.location.pathname;
+  let route = path !== "" ? path.split("/")[1] : "";
+  const isAuth = ManagerUser.checkPermission((role = null), route);
+  if (!isAuth) {
+    alert("khong du quyen");
+  }
+  // Code to trigger when the history changes
+};
+
 const renderView = (path, data) => {
   rootHtml.innerHTML = router(path, data);
   window.history.pushState({}, null, path);
