@@ -1,22 +1,7 @@
 class CartManager {
   carts;
   constructor() {
-    this.carts = [
-      {
-        id: 1,
-        image: "https://via.placeholder.com/150",
-        title: "test product 1",
-        price: 10,
-        quantity: 10,
-      },
-      {
-        id: 2,
-        image: "https://via.placeholder.com/150",
-        title: "test product 2",
-        price: 10,
-        quantity: 10,
-      },
-    ];
+    this.carts = [];
   }
   /**
    * 
@@ -70,7 +55,10 @@ class CartManager {
     this.carts[index].quantity -= 1;
   }
   remove(id) {
-    this.carts.filter((cart) => cart.id !== id);
+    const index = this.carts.findIndex((cart) => cart.id === id);
+    if (index !== -1) {
+      this.carts.splice(index, 1);
+    }
   }
   getCart() {
     return this.carts;

@@ -148,6 +148,7 @@ const viewLogin = () => {
 };
 
 const viewCart = (cartInstance) => {
+  console.log("cartInstance", cartInstance);
   const renderItems = () => {
     let out = "";
     for (const item of cartInstance.getCart()) {
@@ -162,7 +163,9 @@ const viewCart = (cartInstance) => {
             <td>$${item?.price}</td>
             <td>$${item?.price * item?.quantity}</td>
             <td>
-              <button class="btn btn-danger btn-sm">Remove</button>
+              <button data-id="${
+                item?.id
+              }" class="btn btn-danger btn-sm btn-cart-delete">Remove</button>
             </td>
           </tr>
       

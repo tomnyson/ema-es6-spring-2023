@@ -68,57 +68,6 @@ console.log(map);
  *  document.getElementById("products").innerHTML
  */
 // console.log("detailHtml", detailHtml);
-let productList = [];
-(async () => {
-  await ManagerProduct.getAll();
-  printHtml(ManagerProduct.products);
-  productList = ManagerProduct.products;
-})();
-const printHtml = (data) => {
-  const elPost = document.getElementById("items");
-  let html = "";
-  for (const item of data) {
-    html += `
-    <div id="item" class="col-lg-3 col-md-12">
-    <div class="card shadow-sm">
-      <img class="thumbnail" src="#"/>
-      <div class="card-body">
-      <h5 style="font-weight: bold">${item.title}</h5>
-        <p class="card-text">
-          ${item.description}
-        </p>
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="btn-group">
-            <button
-              type="button"
-              class="btn btn-sm btn-outline-secondary"
-            >
-              View
-            </button>
-            <button
-              type="button"
-              class="btn btn-sm btn-outline-secondary"
-            >
-              Edit
-            </button>
-            <button
-            type="button"
-            data-id=${item.id}
-            class="btn-delete btn btn-sm btn-outline-danger"
-          >
-            delete
-          </button>
-          </div>
-          <small class="text-muted">9 mins</small>
-        </div>
-      </div>
-    </div>
-  </div>
-    `;
-  }
-  elPost.innerHTML = html;
-  handleDelete();
-};
 
 // const set = new Set();
 // set.add("a");
@@ -339,20 +288,22 @@ const xuLyRegister = () => {
 };
 
 const checkUser = () => {
-  const isLogin = ManagerUser.checkLogin();
-  if (isLogin) {
-    const user = ManagerUser.getUser();
-    console.log("user", user);
-    const navigation = document.querySelector(".menu-right");
-    navigation.insertAdjacentHTML(
-      "beforeend",
-      `<li class="nav-item">
+  if (ManagerUser) {
+    const isLogin = ManagerUser.checkLogin();
+    if (isLogin) {
+      const user = ManagerUser.getUser();
+      console.log("user", user);
+      const navigation = document.querySelector(".menu-right");
+      navigation.insertAdjacentHTML(
+        "beforeend",
+        `<li class="nav-item">
       <a class="nav-link" href="#">Logout</a>
       </li>`
-    );
-    // View Login
-  } else {
-    // View Gest
+      );
+      // View Login
+    } else {
+      // View Gest
+    }
   }
 };
 checkUser();
@@ -383,4 +334,96 @@ if (btnCart) {
   });
 }
 
-const handleCart = () => {};
+const handleAddCart = () => {
+  const btnAddCart = document.querySelectorAll(".btn-add-cart");
+  if (btnAddCart) {
+    btnAddCart.forEach((e) =>
+      e.addEventListener("click", () => {
+        const id = e.getAttribute("data-id");
+        const addProduct = ManagerProduct.products.filter(
+          (product) => product.id == id
+        );
+        cart.add({ ...addProduct[0], quantity: 1 });
+        console.log("addProduct", cart.getCart());
+      })
+    );
+  }
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  handleAddCart();
+});
+
+let productList = [];
+(async () => {
+  await ManagerProduct.getAll();
+  printHtml(ManagerProduct.products);
+  productList = ManagerProduct.products;
+})();
+const printHtml = (data) => {
+  const elPost = document.getElementById("items");
+  let html = "";
+  for (const item of data) {
+    html += `
+    <div id="item" class="col-lg-3 col-md-12">
+    <div class="card shadow-sm">
+      <img class="thumbnail" src="${item.image}"/>
+      <div class="card-body">
+      <h5 class="cart-title">${item.title}</h5>
+        <p class="card-text">
+          ${item.description}
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+          <button
+              type="button"
+              data-id="${item.id}"
+              class="btn btn-sm btn-outline-secondary btn-add-cart"
+            >
+              Add
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-secondary"
+            >
+              View
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-secondary"
+            >
+              Edit
+            </button>
+            <button
+            type="button"
+            data-id=${item.id}
+            class="btn-delete btn btn-sm btn-outline-danger"
+          >
+            delete
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+  }
+  elPost.innerHTML = html;
+  handleDelete();
+  handleAddCart();
+};
+
+const handleCart = () => {
+  document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("btn-cart-delete")) {
+      const id = event.target.getAttribute("data-id");
+      cart.remove(id + "");
+      renderCart();
+    }
+  });
+};
+
+const renderCart = () => {
+  rootHtml.innerHTML = router("/cart", cart);
+  window.history.pushState({}, null, `/cart`);
+};
