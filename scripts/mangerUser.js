@@ -23,8 +23,12 @@ class ManagerUser {
     localStorage.setItem(USER_KEY, JSON.stringify(data));
   }
   static checkLogin() {
-    if (localStorage.getItem(USER_KEY)) return true;
-    return false;
+    return new Promise((resolve, reject) => {
+      if (localStorage.getItem(USER_KEY)) {
+        resolve(true);
+      }
+      reject(false);
+    });
   }
   static getUser() {
     console.log("call data getUser");

@@ -16,7 +16,7 @@ const viewRegister = () => {
             <input type="password" class="form-control" id="password">
         </div>
         <p style="color:red" id="errors"></p>
-        <button id="btn-register-submit" type="button" class="btn btn-primary">Register</button>
+        <button type="button" class="btn btn-primary btn-register-submit">Register</button>
     </form>
 </div>`;
 };
@@ -141,7 +141,7 @@ const viewLogin = () => {
       <input type="password" class="form-control" id="password">
     </div>
     <p style="color:red" id="errors"></p>
-    <button id="btn-login-submit" type="button" class="btn btn-primary">Login</button>
+    <button type="button" class="btn btn-primary btn-login-submit">Login</button>
     </form>
     </div>
     `;
@@ -200,12 +200,51 @@ const viewCart = (cartInstance) => {
           </tr>
         </tfoot>
       </table>
-      <a href="#" class="btn btn-primary btn-block">
+      <button class="btn btn-primary btn-block" id="btn-cart-checkout">
         Checkout
-      </a>
+      </button>
     </div>`;
 };
 
+const viewCheckout = () => {
+  return `
+  <div>
+  <h1 class="my-4">Checkout</h1>
+  <div class="row">
+      <div class="col col-md-8">
+          <h2 class="my-4">Shipping Information</h2>
+          <form>
+              <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="Enter your phone">
+              </div>
+              <div class="form-group">
+                  <label for="address">Phone</label>
+                  <input type="text" class="form-control" id="address" placeholder="Enter your address">
+              </div>
+              <div class="form-group">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="Enter your note ">
+              </div>
+              <button type="submit" class="btn btn-primary">Place Order</button>
+          </form>
+      </div>
+      <div class="col col-md-4">
+          <h2 class="my-4">Cart Items</h2>
+          <ul class="list-group">
+              {{#each cart.items}}
+              <li class="list-group-item">{{this.name}}</li>
+              {{/each}}
+          </ul>
+      </div>
+  </div>
+  </div>
+  `;
+};
 export const router = (path = "/", data = {}) => {
   switch (path) {
     case "/":
@@ -218,6 +257,8 @@ export const router = (path = "/", data = {}) => {
       return viewRegister(data);
     case "/cart":
       return viewCart(data);
+    case "/checkout":
+      return viewCheckout(data);
     default:
       return view404();
   }

@@ -169,122 +169,56 @@ const handleDelete = () => {
   );
 };
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  console.log("DOMContent");
-  const btn_login = document.querySelector("#btn_login");
-  console.log("btn_login", btn_login);
-  if (btn_login) {
-    btn_login.addEventListener("click", function (e) {
-      e.preventDefault();
-      alert("show login form");
-      return false;
-    });
-  }
-});
+// document.addEventListener("DOMContentLoaded", function (event) {
+//   console.log("DOMContent");
+//   const btn_login = document.querySelector("#btn_login");
+//   console.log("btn_login", btn_login);
+//   if (btn_login) {
+//     btn_login.addEventListener("click", function (e) {
+//       e.preventDefault();
+//       alert("show login form");
+//       return false;
+//     });
+//   }
+// });
 
-const btn = document.querySelector("#btn-login");
-if (btn) {
-  btn.addEventListener("click", () => {
-    rootHtml.innerHTML = router("/login");
-    window.history.pushState({}, null, `/login`);
-    xuLyLogin();
-  });
-}
-
-const btnRegister = document.querySelector("#btn-register");
-if (btnRegister) {
-  btnRegister.addEventListener("click", () => {
-    rootHtml.innerHTML = router("/register");
-    window.history.pushState({}, null, `/register`);
-    xuLyRegister();
-  });
-}
-
-const xuLyLogin = () => {
-  const elUsername = document.getElementById("username");
-  const elPassword = document.getElementById("password");
-  const elButtonLogin = document.getElementById("btn-login-submit");
-  const elErros = document.getElementById("errors");
-  const errors = [];
-  console.log("elButtonLogin", elButtonLogin);
-  elButtonLogin.addEventListener("click", async (event) => {
-    event.preventDefault();
-    if (elUsername.value.trim() === "") {
-      errors.push("user not empty");
-    }
-    if (elPassword.value.trim() === "") {
-      errors.push("password not empty");
-    }
-    if (errors.length > 0) {
-      // show error message
-      elErros.innerHTML = errors.join("</br>");
-      return;
-    } else {
-      // dang nhap thanh cong
-      const isLogin = await ManagerUser.login(
-        elUsername.value,
-        elPassword.value
-      );
-      //   $(".navbar-nav").append(` <li class="nav-item">
-      //   <a id="btn-logout" class="nav-link" href="#">Logout</a>
-      // </li>`);
-      if (isLogin) {
-        const navigation = document.querySelector(".navbar-nav");
-        navigation.insertAdjacentHTML(
-          "beforeend",
-          `<li class="nav-item">
-        <a id="btn-logout" class="nav-link" href="#">Logout</a>
-        </li>`
-        );
-      }
-    }
-  });
-};
 /**
  * get username, password, email
  * kiem tra user ton tai chua ?
  * co -> thong bao
  * chua -> luu vao db -> chuyen ve dang nhap
  */
-const xuLyRegister = () => {
+const xuLyRegister = async () => {
   const elUsername = document.getElementById("username");
   const elPassword = document.getElementById("password");
-  const elButtonLogin = document.getElementById("btn-login-submit");
   const elErros = document.getElementById("errors");
   const errors = [];
-  console.log("elButtonLogin", elButtonLogin);
-  elButtonLogin.addEventListener("click", async (event) => {
-    event.preventDefault();
-    if (elUsername.value.trim() === "") {
-      errors.push("user not empty");
-    }
-    if (elPassword.value.trim() === "") {
-      errors.push("password not empty");
-    }
-    if (errors.length > 0) {
-      // show error message
-      elErros.innerHTML = errors.join("</br>");
-      return;
-    } else {
-      // dang nhap thanh cong
-      const isLogin = await ManagerUser.login(
-        elUsername.value,
-        elPassword.value
-      );
-      //   $(".navbar-nav").append(` <li class="nav-item">
-      //   <a id="btn-logout" class="nav-link" href="#">Logout</a>
-      // </li>`);
-      if (isLogin) {
-        const navigation = document.querySelector(".navbar-nav");
-        navigation.insertAdjacentHTML(
-          "beforeend",
-          `<li class="nav-item">
-        <a id="btn-logout" class="nav-link" href="#">Logout</a>
+  if (elUsername.value.trim() === "") {
+    errors.push("user not empty");
+  }
+  if (elPassword.value.trim() === "") {
+    errors.push("password not empty");
+  }
+  if (errors.length > 0) {
+    // show error message
+    elErros.innerHTML = errors.join("</br>");
+    return;
+  } else {
+    // dang nhap thanh cong
+    const isLogin = await ManagerUser.login(elUsername.value, elPassword.value);
+    //   $(".navbar-nav").append(` <li class="nav-item">
+    //   <a id="btn-logout" class="nav-link" href="#">Logout</a>
+    // </li>`);
+    if (isLogin) {
+      const navigation = document.querySelector(".navbar-nav");
+      navigation.insertAdjacentHTML(
+        "beforeend",
+        `<li class="nav-item">
+        <a  class="nav-link btn-logout" href="#">Logout</a>
         </li>`
-        );
-      }
+      );
     }
-  });
+  }
 };
 
 const checkUser = () => {
@@ -297,7 +231,7 @@ const checkUser = () => {
       navigation.insertAdjacentHTML(
         "beforeend",
         `<li class="nav-item">
-      <a class="nav-link" href="#">Logout</a>
+      <a class="nav-link btn-logout" href="#">Logout</a>
       </li>`
       );
       // View Login
@@ -308,32 +242,14 @@ const checkUser = () => {
 };
 checkUser();
 
-const logout = () => {
-  const el = document.getElementById("btn-logout");
-  console.log("el", el);
-  if (el) {
-    el.addEventListener("click", () => {
-      ManagerUser.logout();
-      rootHtml.innerHTML = router("/login");
-      window.history.pushState({}, null, `/login`);
-      el.remove();
-    });
-  }
+const xuLylogout = () => {
+  ManagerUser.logout();
+  renderView("/");
 };
-logout();
 
 const handleRegister = () => {};
-const cart = new ManagerCart();
-console.log("cart", cart.getCart());
-const btnCart = document.querySelector("#btn-cart");
-if (btnCart) {
-  btnCart.addEventListener("click", () => {
-    rootHtml.innerHTML = router("/cart", cart);
-    window.history.pushState({}, null, `/cart`);
-    handleCart();
-  });
-}
 
+const cart = new ManagerCart();
 const handleAddCart = () => {
   const btnAddCart = document.querySelectorAll(".btn-add-cart");
   if (btnAddCart) {
@@ -367,7 +283,7 @@ const printHtml = (data) => {
     html += `
     <div id="item" class="col-lg-3 col-md-12">
     <div class="card shadow-sm">
-      <img class="thumbnail" src="${item.image}"/>
+      <img class="thumbnail" src="#"/>
       <div class="card-body">
       <h5 class="cart-title">${item.title}</h5>
         <p class="card-text">
@@ -426,4 +342,88 @@ const handleCart = () => {
 const renderCart = () => {
   rootHtml.innerHTML = router("/cart", cart);
   window.history.pushState({}, null, `/cart`);
+};
+
+const handleCheckOut = () => {
+  const btnCheckout = document.querySelector("#btn-cart-checkout");
+  if (btnCheckout) {
+    console.log("btn-cart-checkout");
+    btnCheckout.addEventListener("click", () => {
+      rootHtml.innerHTML = router("/checkout", cart);
+      window.history.pushState({}, null, `/checkout`);
+      handleCart();
+    });
+  }
+};
+
+window.addEventListener("load", (event) => {
+  document.addEventListener("click", (event) => {
+    /**
+     * SWITCH CASE
+     */
+    const classClicked = event.target.classList;
+    switch (true) {
+      case classClicked.contains("btn-login"):
+        renderView("/login");
+        break;
+
+      case classClicked.contains("btn-register"):
+        renderView("/register");
+        break;
+
+      case classClicked.contains("btn-cart"):
+        renderView("/cart", cart);
+        break;
+
+      case classClicked.contains("btn-login-submit"):
+        xuLyLogin();
+        break;
+
+      case classClicked.contains("btn-register-submit"):
+        xuLyRegister();
+        break;
+      case classClicked.contains("btn-logout"):
+        xuLylogout();
+        break;
+
+      default:
+        break;
+    }
+  });
+});
+
+const renderView = (path, data) => {
+  rootHtml.innerHTML = router(path, data);
+  window.history.pushState({}, null, path);
+};
+
+const xuLyLogin = async () => {
+  const elUsername = document.getElementById("username");
+  const elPassword = document.getElementById("password");
+  const elButtonLogin = document.getElementById("btn-login-submit");
+  const elErros = document.getElementById("errors");
+  const errors = [];
+  if (elUsername.value.trim() === "") {
+    errors.push("user not empty");
+  }
+  if (elPassword.value.trim() === "") {
+    errors.push("password not empty");
+  }
+  if (errors.length > 0) {
+    // show error message
+    elErros.innerHTML = errors.join("</br>");
+    return;
+  } else {
+    // dang nhap thanh cong
+    const isLogin = await ManagerUser.login(elUsername.value, elPassword.value);
+    if (isLogin) {
+      const navigation = document.querySelector(".navbar-nav");
+      navigation.insertAdjacentHTML(
+        "beforeend",
+        `<li class="nav-item">
+        <a  class="nav-link btn-logout" href="#">Logout</a>
+        </li>`
+      );
+    }
+  }
 };
