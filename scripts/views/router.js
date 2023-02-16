@@ -146,6 +146,63 @@ const viewLogin = () => {
     </div>
     `;
 };
+
+const viewCart = (cartInstance) => {
+  const renderItems = () => {
+    let out = "";
+    for (const item of cartInstance.getCart()) {
+      out += `
+      <tr>
+            <td> <img src="${item?.image}" width="100" />${item?.title}</td>
+            <td>
+              <input type="number" value="${
+                item?.quantity
+              }" min="1" class="form-control" />
+            </td>
+            <td>$${item?.price}</td>
+            <td>$${item?.price * item?.quantity}</td>
+            <td>
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </td>
+          </tr>
+      
+      `;
+    }
+    return out;
+  };
+
+  return `
+    <div class="container">
+      <h1 class="text-center">Shopping Cart</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          ${renderItems()}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3"></td>
+            <td>
+              <strong>Total: $${cartInstance.getTotal()}</strong>
+            </td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      <a href="#" class="btn btn-primary btn-block">
+        Checkout
+      </a>
+    </div>`;
+};
+
 export const router = (path = "/", data = {}) => {
   switch (path) {
     case "/":
@@ -156,6 +213,8 @@ export const router = (path = "/", data = {}) => {
       return viewLogin(data);
     case "/register":
       return viewRegister(data);
+    case "/cart":
+      return viewCart(data);
     default:
       return view404();
   }

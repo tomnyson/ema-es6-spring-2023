@@ -3,7 +3,7 @@ import ManagerProduct from "./mangerProduct.js";
 import ManagerUser from "./mangerUser.js";
 import { debounce } from "./helper/helper";
 import { router } from "./views/router.js";
-
+import ManagerCart from "./managerCart.js";
 var x = 10;
 // const y = 5;
 // y = 10;
@@ -372,3 +372,15 @@ const logout = () => {
 logout();
 
 const handleRegister = () => {};
+const cart = new ManagerCart();
+console.log("cart", cart.getCart());
+const btnCart = document.querySelector("#btn-cart");
+if (btnCart) {
+  btnCart.addEventListener("click", () => {
+    rootHtml.innerHTML = router("/cart", cart);
+    window.history.pushState({}, null, `/cart`);
+    handleCart();
+  });
+}
+
+const handleCart = () => {};
