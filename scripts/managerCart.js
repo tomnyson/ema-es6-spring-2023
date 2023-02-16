@@ -2,6 +2,7 @@ class CartManager {
   carts;
   constructor() {
     this.carts = [];
+    this.restore();
   }
   /**
    * 
@@ -28,21 +29,13 @@ class CartManager {
      * cart co item -> kt ton tai chua co -> them mou
      * neu co: -> cap nhat lai cart
      */
-    if (this.carts.length) {
-      // kt
-      const index = this.carts.findIndex((cart) => cart.id === item.id);
-      if (index === -1) {
-        this.carts.push(item);
-        return;
-      }
-      /**
-       * xu ly update
-       */
-      this.carts[index].quantity += 1;
+    const index = this.carts.findIndex((cart) => cart.id === item.id);
+    if (index !== -1) {
+      this.carts[index].quantity++;
     } else {
-      this.carts.push(item);
-      return;
+      this.carts.push({ ...item, quantity: 1 });
     }
+    this.store();
   }
   decreaseQuantity(id) {
     const index = this.carts.findIndex((cart) => cart.id === id);
@@ -53,15 +46,27 @@ class CartManager {
       return;
     }
     this.carts[index].quantity -= 1;
+    this.store();
   }
   remove(id) {
     const index = this.carts.findIndex((cart) => cart.id === id);
     if (index !== -1) {
       this.carts.splice(index, 1);
     }
+    this.store();
   }
   getCart() {
     return this.carts;
+  }
+  store() {
+    console.log("(this.carts", this.carts);
+    localStorage.setItem("cart", JSON.stringify(this.getCart()));
+  }
+  restore() {
+    if (localStorage.getItem("cart")) {
+      console.log(JSON.parse(localStorage.getItem("cart")));
+      this.carts = JSON.parse(localStorage.getItem("cart"));
+    }
   }
   getTotal = () => {
     /**
