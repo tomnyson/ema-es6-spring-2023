@@ -25,5 +25,7 @@
     "url": "https://github.com/tomnyson/ema-es6-spring-2023/issues"
   },
   "homepage": "https://github.com/tomnyson/ema-es6-spring-2023#readme",
-  "dependencies": {}
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
 }

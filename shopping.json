@@ -1,0 +1,93 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "email": "tabletkindfire@gmail.com",
+        "username": "admin",
+        "password": "123456",
+        "role": "admin",
+        "createdAt": "2022-02-23T18:13:11.710Z"
+      },
+      {
+        "id": 2,
+        "email": "user@gmail.com",
+        "username": "user",
+        "password": "123456",
+        "role": "user",
+        "createdAt": "2022-02-23T18:13:11.710Z"
+      }
+    ],
+    "products": [
+      {
+        "id": "67",
+        "name": "Vỏ pc",
+        "title": "Dignissimos aut veritatis dolorem eligendi animi deleniti.",
+        "description": "Vỏ case NZXT H510 Elite MATTE WHITE (Mid Tower/Màu Trắng)",
+        "price": "500",
+        "image": "https://cdn.tgdd.vn/Products/Images/44/311178/Slider/vi-vn-asus-vivobook-go-15-e1504fa-r5-nj776w-slider-1.jpg",
+        "category": "adipisci",
+        "picture": "https://anphat.com.vn/media/product/250_34180_large_b2feaa953e1c78d9.jpg",
+        "createdAt": "2022-02-23T18:13:11.710Z"
+      },
+      {
+        "id": "69",
+        "name": "GHED0336",
+        "title": "Quia eum consequuntur consequatur et amet id repellat.",
+        "description": "Ghế game E-Dra LUX Champion EGC2022 Real Leather",
+        "price": "600",
+        "image": "https://cdn.tgdd.vn/Products/Images/44/311178/Slider/vi-vn-asus-vivobook-go-15-e1504fa-r5-nj776w-slider-1.jpg",
+        "category": "minus",
+        "picture": "https://anphat.com.vn/media/product/250_33712_e_dra_lux_champion_egc2022__1_.jpg",
+        "createdAt": "2022-02-23T23:26:28.626Z"
+      }
+    ],
+    "carts": [
+      {
+        "id": 1,
+        "userId": 2,
+        "products": [
+          {
+            "productId": "67",
+            "quantity": 1
+          },
+          {
+            "productId": "69",
+            "quantity": 2
+          }
+        ],
+        "createdAt": "2023-03-01T09:30:00.000Z"
+      },
+      {
+        "id": 2,
+        "userId": 2,
+        "products": [
+          {
+            "productId": "69",
+            "quantity": 1
+          }
+        ],
+        "createdAt": "2023-03-02T11:15:00.000Z"
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "userId": 2,
+        "cartId": 1,
+        "orderDate": "2023-03-01T10:00:00.000Z",
+        "total": 3500000,
+        "status": "processing",
+        "shippingAddress": "123 Đường ABC, Quận 1, TP.HCM"
+      },
+      {
+        "id": 2,
+        "userId": 2,
+        "cartId": 2,
+        "orderDate": "2023-03-02T12:00:00.000Z",
+        "total": 50000,
+        "status": "delivered",
+        "shippingAddress": "123 Đường ABC, Quận 1, TP.HCM"
+      }
+    ]
+  }
+  
